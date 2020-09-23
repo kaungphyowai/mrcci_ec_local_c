@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "422734855257",
+    "firebase_url": "https://mrcci-ec.firebaseio.com",
+    "project_id": "mrcci-ec",
+    "storage_bucket": "mrcci-ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:422734855257:android:0b8b4d51eb5701b7af0548",
+        "android_client_info": {
+          "package_name": "com.mrcci.mrcci_ec"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "422734855257-sag1bd64oadaiqa55mnvba0v6uu9vbrl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mrcci.mrcci_ec",
+            "certificate_hash": "ceeacca64cb57746b4cf80fd23786480d821cd19"
+          }
+        },
+        {
+          "client_id": "422734855257-s1q0tp67grvrpk9uqaj3gq7vja4ul11c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXHIgodXpoyuQNeASqDqvDMzyoi0ZKXH0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "422734855257-s1q0tp67grvrpk9uqaj3gq7vja4ul11c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
