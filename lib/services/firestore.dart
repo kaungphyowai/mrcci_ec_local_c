@@ -7,10 +7,33 @@ class DatabaseService {
   final CollectionReference userCollection =
       FirebaseFirestore.instance.collection('userProfiles');
 
-  Future updateUser(String name, int age, int phone) async {
-    print(name);
-    return await userCollection
-        .doc(uid)
-        .set({'name': name, 'age': age, 'phone': phone});
+  Future newUser(String name, String dob, String phone, String bio,
+      String email, String address, bool active) async {
+    return await userCollection.doc(uid).set({
+      'username': name,
+      'dob': dob,
+      'email': email,
+      'bio': bio,
+      'address': address,
+      'phone': phone,
+      'status': active
+    });
+  }
+
+  // Future getUserStatusAndRole(String userid) async {
+  //   dynamic userdata;
+  //   await userCollection.doc(userid).get().then((val) {
+  //     userdata = val.data();
+  //   });
+  //   return userdata;
+  // }
+
+  Stream<DocumentSnapshot> get userData {
+    dynamic newuser;
+    userCollection.doc(uid).get().then((value) {
+      print(value.data());
+      newuser = value.data();
+    });
+    return newuser;
   }
 }

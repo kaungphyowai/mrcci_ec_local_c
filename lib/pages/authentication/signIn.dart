@@ -1,11 +1,15 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:mrcci_ec/models/user.dart';
+import 'package:mrcci_ec/pages/authentication/register.dart';
 import 'package:mrcci_ec/pages/contact_support.dart';
 import 'package:mrcci_ec/services/firebase_auth.dart';
 import 'package:mrcci_ec/shared/loading.dart';
 
 class SignIn extends StatefulWidget {
+  final Function toggleView;
+  SignIn({this.toggleView});
+
   @override
   _SignInState createState() => _SignInState();
 }
@@ -58,13 +62,16 @@ class _SignInState extends State<SignIn> {
               actions: [
                 FlatButton.icon(
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => CustomerCare()));
+                      widget.toggleView();
                     },
-                    icon: Icon(Icons.person),
-                    label: Text('Support')),
+                    icon: Icon(
+                      Icons.bookmark,
+                      color: Colors.white,
+                    ),
+                    label: Text(
+                      'Register',
+                      style: TextStyle(color: Colors.white),
+                    )),
               ],
             ),
             body: Column(
